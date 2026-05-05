@@ -137,36 +137,39 @@ export default function Index() {
 
       {/* HERO */}
       <section className="pt-24 md:pt-0 min-h-screen flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--warm-light)] via-[var(--cream)] to-[var(--cream)]" />
+        {/* Full background image */}
         <div
-          className="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center opacity-40 md:opacity-60"
-          style={{ backgroundImage: `url(https://cdn.poehali.dev/files/8db602a7-1091-4b41-ab72-bf85c467429f.jpg)` }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/0536f25d-92ca-466a-af54-703da5e88e13.jpg)` }}
         />
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-[var(--cream)] to-transparent" />
+        {/* Warm orange-wheat gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/70 via-[#d4830a]/40 to-[#1e1a14]/80" />
+        {/* Left text fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e1a14]/60 via-[#1e1a14]/20 to-transparent" />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-32">
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-32 w-full">
           <div className="max-w-xl">
-            <span className="inline-block text-xs font-golos tracking-[0.2em] uppercase text-[var(--brown)] mb-6 bg-[var(--warm-light)] px-4 py-2 rounded-full">
+            <span className="inline-block text-xs font-golos tracking-[0.2em] uppercase text-[#f5ddb4] mb-6 bg-[#8b5e3c]/50 backdrop-blur-sm border border-[#d4a96a]/40 px-4 py-2 rounded-full">
               Живая закваска · Без дрожжей
             </span>
-            <h1 className="font-cormorant text-5xl md:text-7xl font-light text-[var(--dark)] leading-[1.1] mb-6">
+            <h1 className="font-cormorant text-5xl md:text-7xl font-light text-white leading-[1.1] mb-6 drop-shadow-lg">
               Хлеб, в котором<br />
-              <em className="not-italic font-semibold text-[var(--brown)]">живёт душа</em>
+              <em className="not-italic font-semibold text-[#f5c87a]">живёт душа</em>
             </h1>
-            <p className="text-[var(--muted)] text-lg leading-relaxed mb-10 font-golos">
+            <p className="text-[#e8d5b8] text-lg leading-relaxed mb-10 font-golos drop-shadow">
               Каждая буханка выпекается на живой закваске, которой уже несколько лет.
               Заказывайте сегодня — привезём свежим завтра.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollTo("#catalog")}
-                className="bg-[var(--dark)] text-[var(--cream)] px-8 py-4 rounded-full text-base hover:bg-[var(--brown)] transition-all duration-300 font-golos tracking-wide"
+                className="bg-[#f5c87a] text-[#1e1a14] px-8 py-4 rounded-full text-base hover:bg-[#f0b84a] transition-all duration-300 font-golos tracking-wide font-medium shadow-lg"
               >
                 Смотреть каталог
               </button>
               <button
                 onClick={() => scrollTo("#about")}
-                className="border border-[var(--border-warm)] text-[var(--dark)] px-8 py-4 rounded-full text-base hover:border-[var(--brown)] hover:text-[var(--brown)] transition-all duration-300 font-golos tracking-wide"
+                className="border border-white/50 text-white px-8 py-4 rounded-full text-base hover:bg-white/10 hover:border-white transition-all duration-300 font-golos tracking-wide backdrop-blur-sm"
               >
                 О закваске
               </button>
@@ -174,7 +177,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--muted)]">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
           <span className="text-xs tracking-widest uppercase font-golos">Листайте вниз</span>
           <Icon name="ChevronDown" size={18} className="animate-bounce" />
         </div>
