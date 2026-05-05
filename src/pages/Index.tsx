@@ -335,8 +335,8 @@ export default function Index() {
           <p className="text-[#e8d5b8] text-xl md:text-2xl font-golos mb-4 leading-relaxed">
             Закажи свежий хлеб к завтраку
           </p>
-          <p className="text-[#e8d5b8]/70 font-golos text-base mb-12">
-            Принимаем заказы ежедневно до 20:00 — привезём тёплым утром следующего дня
+          <p className="font-cormorant text-2xl md:text-3xl font-semibold mb-12 text-[#f5c87a] drop-shadow-lg tracking-wide">
+            Для получения свежего хлеба завтра —<br className="hidden md:block" /> сделай заказ сегодня до&nbsp;16:00
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
@@ -351,7 +351,7 @@ export default function Index() {
               <span className="text-white font-golos font-semibold text-lg tracking-wide">+7 902 522-64-71</span>
               <div className="flex items-center gap-2 text-[#e8d5b8]/70">
                 <Icon name="Clock" size={13} className="text-[#f5c87a] shrink-0" />
-                <span className="font-golos text-xs">Ежедневно до 20:00</span>
+                <span className="font-golos text-xs">Ежедневно до 16:00</span>
               </div>
             </div>
           </div>
