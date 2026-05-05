@@ -321,113 +321,120 @@ export default function Index() {
       </section>
 
       {/* CONTACTS / ORDER FORM */}
-      <section id="contacts" className="py-24 md:py-32 bg-[var(--dark)]">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="contacts" className="min-h-screen flex items-center relative overflow-hidden py-24 md:py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/8ba0e18b-9e6d-4f79-83d1-880ce1806ba9.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/60 via-[#d4830a]/30 to-[#1e1a14]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#1e1a14]/80" />
+
+        <div className="relative max-w-6xl mx-auto px-6 w-full">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="text-xs tracking-[0.2em] uppercase text-[var(--brown)] font-golos mb-4 block">Контакты & Заказ</span>
-              <h2 className="font-cormorant text-4xl md:text-6xl font-light text-[var(--cream)] leading-tight mb-8">
+              <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">Контакты & Заказ</span>
+              <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white leading-tight mb-8 drop-shadow-lg">
                 Заказать свежий<br />хлеб на завтра
               </h2>
               <div className="space-y-5 mb-10">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--dark-card)] flex items-center justify-center shrink-0">
-                    <Icon name="Clock" size={18} className="text-[var(--brown)]" />
+                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
+                    <Icon name="Clock" size={18} className="text-[#f5c87a]" />
                   </div>
                   <div>
-                    <div className="text-[var(--cream)] font-golos text-sm font-medium">Приём заказов</div>
-                    <div className="text-[var(--muted-light)] font-golos text-sm">Ежедневно до 20:00</div>
+                    <div className="text-white font-golos text-sm font-medium">Приём заказов</div>
+                    <div className="text-[#e8d5b8] font-golos text-sm">Ежедневно до 20:00</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--dark-card)] flex items-center justify-center shrink-0">
-                    <Icon name="Truck" size={18} className="text-[var(--brown)]" />
+                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
+                    <Icon name="Truck" size={18} className="text-[#f5c87a]" />
                   </div>
                   <div>
-                    <div className="text-[var(--cream)] font-golos text-sm font-medium">Доставка</div>
-                    <div className="text-[var(--muted-light)] font-golos text-sm">На следующий день, своими силами</div>
+                    <div className="text-white font-golos text-sm font-medium">Доставка</div>
+                    <div className="text-[#e8d5b8] font-golos text-sm">На следующий день, своими силами</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--dark-card)] flex items-center justify-center shrink-0">
-                    <Icon name="MessageCircle" size={18} className="text-[var(--brown)]" />
+                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
+                    <Icon name="MessageCircle" size={18} className="text-[#f5c87a]" />
                   </div>
                   <div>
-                    <div className="text-[var(--cream)] font-golos text-sm font-medium">Связаться</div>
-                    <div className="text-[var(--muted-light)] font-golos text-sm">Напишите нам — ответим быстро</div>
+                    <div className="text-white font-golos text-sm font-medium">Связаться</div>
+                    <div className="text-[#e8d5b8] font-golos text-sm">Напишите нам — ответим быстро</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[var(--dark-card)] rounded-3xl p-8">
+            <div className="bg-[#1e1a14]/65 backdrop-blur-md border border-[#d4a96a]/20 rounded-3xl p-8">
               {submitted ? (
                 <div className="text-center py-10">
                   <span className="text-5xl block mb-4">🍞</span>
-                  <h3 className="font-cormorant text-3xl text-[var(--cream)] mb-3">Заказ принят!</h3>
-                  <p className="text-[var(--muted-light)] font-golos text-sm leading-relaxed">
+                  <h3 className="font-cormorant text-3xl text-white mb-3">Заказ принят!</h3>
+                  <p className="text-[#e8d5b8] font-golos text-sm leading-relaxed">
                     Мы свяжемся с вами для подтверждения.<br />Ждите свежий хлеб завтра!
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-6 text-[var(--brown)] text-sm font-golos underline underline-offset-4"
+                    className="mt-6 text-[#f5c87a] text-sm font-golos underline underline-offset-4"
                   >
                     Оформить ещё один заказ
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="font-cormorant text-2xl text-[var(--cream)] mb-6">Оставить заявку</h3>
+                  <h3 className="font-cormorant text-2xl text-white mb-6">Оставить заявку</h3>
                   <div>
-                    <label className="text-xs text-[var(--muted-light)] font-golos tracking-wide uppercase block mb-2">Ваше имя</label>
+                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Ваше имя</label>
                     <input
                       type="text"
                       required
                       placeholder="Как вас зовут?"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-[var(--dark)] text-[var(--cream)] placeholder:text-[var(--muted-light)]/50 border border-[var(--dark-border)] rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[var(--brown)] transition-colors"
+                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-[var(--muted-light)] font-golos tracking-wide uppercase block mb-2">Телефон</label>
+                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Телефон</label>
                     <input
                       type="tel"
                       required
                       placeholder="+7 (___) ___-__-__"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-[var(--dark)] text-[var(--cream)] placeholder:text-[var(--muted-light)]/50 border border-[var(--dark-border)] rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[var(--brown)] transition-colors"
+                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-[var(--muted-light)] font-golos tracking-wide uppercase block mb-2">Адрес доставки</label>
+                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Адрес доставки</label>
                     <input
                       type="text"
                       required
                       placeholder="Улица, дом, квартира"
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full bg-[var(--dark)] text-[var(--cream)] placeholder:text-[var(--muted-light)]/50 border border-[var(--dark-border)] rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[var(--brown)] transition-colors"
+                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-[var(--muted-light)] font-golos tracking-wide uppercase block mb-2">Комментарий к заказу</label>
+                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Комментарий к заказу</label>
                     <textarea
                       rows={3}
                       placeholder="Что хотите заказать? Особые пожелания?"
                       value={formData.comment}
                       onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-                      className="w-full bg-[var(--dark)] text-[var(--cream)] placeholder:text-[var(--muted-light)]/50 border border-[var(--dark-border)] rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[var(--brown)] transition-colors resize-none"
+                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors resize-none"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[var(--brown)] text-white py-4 rounded-xl font-golos text-sm tracking-wide hover:bg-[var(--brown-dark)] transition-colors duration-200 mt-2"
+                    className="w-full bg-[#f5c87a] text-[#1e1a14] py-4 rounded-xl font-golos text-sm tracking-wide font-medium hover:bg-[#f0b84a] transition-colors duration-200 mt-2"
                   >
                     Отправить заявку
                   </button>
-                  <p className="text-center text-[var(--muted-light)]/60 text-xs font-golos">
+                  <p className="text-center text-[#e8d5b8]/50 text-xs font-golos">
                     Мы перезвоним для подтверждения заказа
                   </p>
                 </form>
@@ -438,10 +445,10 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[var(--dark)] border-t border-[var(--dark-border)] py-8">
+      <footer className="bg-[#1e1a14] border-t border-[#d4a96a]/15 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-cormorant text-xl text-[var(--cream)]">Хлеб & Закваска</span>
-          <span className="text-[var(--muted-light)] text-xs font-golos">
+          <span className="font-cormorant text-xl text-white">Хлеб & Закваска</span>
+          <span className="text-[#e8d5b8]/50 text-xs font-golos">
             Принимаем заказы ежедневно · Доставка на следующий день
           </span>
         </div>
