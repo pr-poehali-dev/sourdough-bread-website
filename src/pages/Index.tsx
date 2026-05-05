@@ -184,15 +184,24 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 md:py-32 bg-[var(--dark)]">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="about" className="min-h-screen flex items-center relative overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/1c581981-c0e7-4f82-b1c3-fe351e8c6fa1.jpg)` }}
+        />
+        {/* Same warm overlay as hero */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/65 via-[#d4830a]/35 to-[#1e1a14]/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e1a14]/70 via-[#1e1a14]/30 to-transparent" />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs tracking-[0.2em] uppercase text-[var(--brown)] font-golos mb-4 block">О закваске</span>
-              <h2 className="font-cormorant text-4xl md:text-6xl font-light text-[var(--cream)] leading-tight mb-8">
+              <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full w-fit">О закваске</span>
+              <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white leading-tight mb-8 drop-shadow-lg">
                 Живой организм<br />в каждом хлебе
               </h2>
-              <div className="space-y-5 text-[var(--muted-light)] font-golos leading-relaxed">
+              <div className="space-y-5 text-[#e8d5b8] font-golos leading-relaxed">
                 <p>
                   Закваска — это живая культура диких дрожжей и молочнокислых бактерий.
                   Наша живёт уже несколько лет, мы кормим её каждый день.
@@ -202,23 +211,23 @@ export default function Index() {
                   лучше усваиваемым и невероятно ароматным. Никакой химии, никаких улучшителей.
                 </p>
                 <p>
-                  Кислинка, хрустящая корочка, дырчатый мякиш — всё это результат времени
-                  и натуральных процессов, а не добавок.
+                  Гриссини с семенами льна — хрустящие итальянские хлебные палочки, которые
+                  мы тоже готовим на закваске. Идеальны к супу или просто так.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[var(--dark-card)] rounded-2xl p-6 flex flex-col gap-2">
-                <span className="font-cormorant text-5xl font-light text-[var(--brown)]">12+</span>
-                <span className="text-[var(--muted-light)] text-sm font-golos">часов ферментации каждой буханки</span>
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2">
+                <span className="font-cormorant text-5xl font-light text-[#f5c87a]">12+</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">часов ферментации каждой буханки</span>
               </div>
-              <div className="bg-[var(--dark-card)] rounded-2xl p-6 flex flex-col gap-2">
-                <span className="font-cormorant text-5xl font-light text-[var(--brown)]">0</span>
-                <span className="text-[var(--muted-light)] text-sm font-golos">дрожжей, улучшителей и добавок</span>
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2">
+                <span className="font-cormorant text-5xl font-light text-[#f5c87a]">0</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">дрожжей, улучшителей и добавок</span>
               </div>
-              <div className="bg-[var(--dark-card)] rounded-2xl p-6 flex flex-col gap-2 col-span-2">
-                <span className="font-cormorant text-5xl font-light text-[var(--brown)]">100%</span>
-                <span className="text-[var(--muted-light)] text-sm font-golos">ручная работа — от замеса до выпечки</span>
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2 col-span-2">
+                <span className="font-cormorant text-5xl font-light text-[#f5c87a]">100%</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">ручная работа — от замеса до выпечки</span>
               </div>
             </div>
           </div>
