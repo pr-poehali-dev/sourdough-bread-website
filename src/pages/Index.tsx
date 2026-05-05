@@ -341,15 +341,18 @@ export default function Index() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
-              href="tel:+79000000000"
+              href="tel:+79025226471"
               className="group flex items-center gap-3 bg-[#f5c87a] text-[#1e1a14] px-10 py-5 rounded-full text-lg font-golos font-semibold hover:bg-[#f0b84a] transition-all duration-300 shadow-2xl hover:shadow-[#f5c87a]/30 hover:scale-105"
             >
               <Icon name="Phone" size={22} className="group-hover:animate-bounce" />
               Позвонить пекарю
             </a>
-            <div className="flex items-center gap-3 bg-[#1e1a14]/55 backdrop-blur-sm border border-[#d4a96a]/25 px-6 py-5 rounded-full">
-              <Icon name="Clock" size={18} className="text-[#f5c87a] shrink-0" />
-              <span className="text-[#e8d5b8] font-golos text-sm">Ежедневно · до 20:00</span>
+            <div className="flex flex-col items-center gap-1 bg-[#1e1a14]/55 backdrop-blur-sm border border-[#d4a96a]/25 px-6 py-4 rounded-full">
+              <span className="text-white font-golos font-semibold text-lg tracking-wide">+7 902 522-64-71</span>
+              <div className="flex items-center gap-2 text-[#e8d5b8]/70">
+                <Icon name="Clock" size={13} className="text-[#f5c87a] shrink-0" />
+                <span className="font-golos text-xs">Ежедневно до 20:00</span>
+              </div>
             </div>
           </div>
 
