@@ -235,25 +235,27 @@ export default function Index() {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="py-24 md:py-32 bg-[var(--cream)]">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="process" className="min-h-screen flex items-center relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/06026641-23f9-476a-af86-0f34cc775335.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3a1a0a]/80 via-[#6b2e0d]/50 to-[#1e1a14]/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e1a14]/75 via-[#1e1a14]/30 to-transparent" />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
           <div className="text-center mb-16">
-            <span className="text-xs tracking-[0.2em] uppercase text-[var(--brown)] font-golos mb-4 block">Как мы печём</span>
-            <h2 className="font-cormorant text-4xl md:text-6xl font-light text-[var(--dark)]">
+            <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">Как мы печём</span>
+            <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white drop-shadow-lg">
               Процесс от замеса<br />до вашего стола
             </h2>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {PROCESS_STEPS.map((step, i) => (
-              <div key={i} className="relative">
-                <div className="font-cormorant text-6xl font-light text-[var(--border-warm)] mb-4">{step.num}</div>
-                <h3 className="font-cormorant text-2xl font-semibold text-[var(--dark)] mb-3">{step.title}</h3>
-                <p className="text-[var(--muted)] text-sm leading-relaxed font-golos">{step.desc}</p>
-                {i < PROCESS_STEPS.length - 1 && (
-                  <div className="hidden md:block absolute top-8 right-0 translate-x-1/2 text-[var(--border-warm)]">
-                    <Icon name="ArrowRight" size={20} />
-                  </div>
-                )}
+              <div key={i} className="relative bg-[#1e1a14]/55 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6">
+                <div className="font-cormorant text-6xl font-light text-[#f5c87a]/50 mb-4">{step.num}</div>
+                <h3 className="font-cormorant text-2xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-[#e8d5b8] text-sm leading-relaxed font-golos">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -261,20 +263,27 @@ export default function Index() {
       </section>
 
       {/* CATALOG */}
-      <section id="catalog" className="py-24 md:py-32 bg-[var(--warm-light)]">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="catalog" className="min-h-screen flex items-center relative overflow-hidden py-24 md:py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/84965306-ad2f-49c0-a387-069f23edcc7d.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/65 via-[#d4830a]/35 to-[#1e1a14]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e1a14]/60 via-transparent to-[#1e1a14]/70" />
+
+        <div className="relative max-w-6xl mx-auto px-6 w-full">
           <div className="text-center mb-16">
-            <span className="text-xs tracking-[0.2em] uppercase text-[var(--brown)] font-golos mb-4 block">Каталог</span>
-            <h2 className="font-cormorant text-4xl md:text-6xl font-light text-[var(--dark)]">
+            <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">Каталог</span>
+            <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white drop-shadow-lg">
               Сейчас в меню
             </h2>
-            <p className="text-[var(--muted)] mt-4 font-golos">Заказывайте до 20:00 — доставим завтра утром</p>
+            <p className="text-[#e8d5b8] mt-4 font-golos">Заказывайте до 20:00 — доставим завтра утром</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {PRODUCTS.map((product) => (
               <div
                 key={product.id}
-                className="bg-[var(--cream)] rounded-3xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-3xl overflow-hidden hover:bg-[#1e1a14]/75 transition-all duration-300 flex flex-col"
               >
                 {product.image ? (
                   <div className="h-56 overflow-hidden">
@@ -285,21 +294,21 @@ export default function Index() {
                     />
                   </div>
                 ) : (
-                  <div className="h-56 bg-[var(--warm-light)] flex items-center justify-center">
+                  <div className="h-56 bg-[#2a1f10]/60 flex items-center justify-center">
                     <span className="text-7xl">{product.emoji}</span>
                   </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="font-cormorant text-2xl font-semibold text-[var(--dark)]">{product.name}</h3>
-                    <span className="font-cormorant text-2xl text-[var(--brown)] font-semibold whitespace-nowrap">{product.price}</span>
+                    <h3 className="font-cormorant text-2xl font-semibold text-white">{product.name}</h3>
+                    <span className="font-cormorant text-2xl text-[#f5c87a] font-semibold whitespace-nowrap">{product.price}</span>
                   </div>
-                  <p className="text-[var(--muted)] text-sm leading-relaxed font-golos mb-4">{product.description}</p>
+                  <p className="text-[#e8d5b8] text-sm leading-relaxed font-golos mb-4">{product.description}</p>
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-xs text-[var(--muted)] font-golos bg-[var(--warm-light)] px-3 py-1 rounded-full">{product.weight}</span>
+                    <span className="text-xs text-[#e8d5b8] font-golos bg-[#1e1a14]/50 border border-[#d4a96a]/20 px-3 py-1 rounded-full">{product.weight}</span>
                     <button
                       onClick={() => document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })}
-                      className="text-sm text-[var(--dark)] border border-[var(--dark)] px-5 py-2 rounded-full hover:bg-[var(--dark)] hover:text-[var(--cream)] transition-all duration-200 font-golos"
+                      className="text-sm text-[#1e1a14] bg-[#f5c87a] px-5 py-2 rounded-full hover:bg-[#f0b84a] transition-all duration-200 font-golos font-medium"
                     >
                       Заказать
                     </button>
