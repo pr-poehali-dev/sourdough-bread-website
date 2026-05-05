@@ -140,7 +140,7 @@ export default function Index() {
         {/* Full background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/0536f25d-92ca-466a-af54-703da5e88e13.jpg)` }}
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/24d79bce-7803-47c2-abd2-0b5204b0b567.jpg)` }}
         />
         {/* Warm orange-wheat gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/70 via-[#d4830a]/40 to-[#1e1a14]/80" />
