@@ -70,18 +70,11 @@ const PROCESS_STEPS = [
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", phone: "", address: "", comment: "" });
-  const [submitted, setSubmitted] = useState(false);
 
   const scrollTo = (href: string) => {
     setMenuOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
   };
 
   return (
@@ -329,116 +322,49 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/60 via-[#d4830a]/30 to-[#1e1a14]/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#1e1a14]/80" />
 
-        <div className="relative max-w-6xl mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div>
-              <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">Контакты & Заказ</span>
-              <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white leading-tight mb-8 drop-shadow-lg">
-                Заказать свежий<br />хлеб на завтра
-              </h2>
-              <div className="space-y-5 mb-10">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
-                    <Icon name="Clock" size={18} className="text-[#f5c87a]" />
-                  </div>
-                  <div>
-                    <div className="text-white font-golos text-sm font-medium">Приём заказов</div>
-                    <div className="text-[#e8d5b8] font-golos text-sm">Ежедневно до 20:00</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
-                    <Icon name="Truck" size={18} className="text-[#f5c87a]" />
-                  </div>
-                  <div>
-                    <div className="text-white font-golos text-sm font-medium">Доставка</div>
-                    <div className="text-[#e8d5b8] font-golos text-sm">На следующий день, своими силами</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 flex items-center justify-center shrink-0">
-                    <Icon name="MessageCircle" size={18} className="text-[#f5c87a]" />
-                  </div>
-                  <div>
-                    <div className="text-white font-golos text-sm font-medium">Связаться</div>
-                    <div className="text-[#e8d5b8] font-golos text-sm">Напишите нам — ответим быстро</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="relative max-w-4xl mx-auto px-6 w-full text-center">
+          <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-8 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">
+            Заказ по звонку
+          </span>
 
-            <div className="bg-[#1e1a14]/65 backdrop-blur-md border border-[#d4a96a]/20 rounded-3xl p-8">
-              {submitted ? (
-                <div className="text-center py-10">
-                  <span className="text-5xl block mb-4">🍞</span>
-                  <h3 className="font-cormorant text-3xl text-white mb-3">Заказ принят!</h3>
-                  <p className="text-[#e8d5b8] font-golos text-sm leading-relaxed">
-                    Мы свяжемся с вами для подтверждения.<br />Ждите свежий хлеб завтра!
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-6 text-[#f5c87a] text-sm font-golos underline underline-offset-4"
-                  >
-                    Оформить ещё один заказ
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="font-cormorant text-2xl text-white mb-6">Оставить заявку</h3>
-                  <div>
-                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Ваше имя</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Как вас зовут?"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Телефон</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+7 (___) ___-__-__"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Адрес доставки</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Улица, дом, квартира"
-                      value={formData.address}
-                      onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs text-[#e8d5b8] font-golos tracking-wide uppercase block mb-2">Комментарий к заказу</label>
-                    <textarea
-                      rows={3}
-                      placeholder="Что хотите заказать? Особые пожелания?"
-                      value={formData.comment}
-                      onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-                      className="w-full bg-[#1e1a14]/60 text-white placeholder:text-[#e8d5b8]/40 border border-[#d4a96a]/25 rounded-xl px-4 py-3 font-golos text-sm focus:outline-none focus:border-[#f5c87a] transition-colors resize-none"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-[#f5c87a] text-[#1e1a14] py-4 rounded-xl font-golos text-sm tracking-wide font-medium hover:bg-[#f0b84a] transition-colors duration-200 mt-2"
-                  >
-                    Отправить заявку
-                  </button>
-                  <p className="text-center text-[#e8d5b8]/50 text-xs font-golos">
-                    Мы перезвоним для подтверждения заказа
-                  </p>
-                </form>
-              )}
+          <h2 className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-light text-white leading-[1.15] mb-6 drop-shadow-lg">
+            Позаботься о своём<br />
+            <em className="not-italic font-semibold text-[#f5c87a]">добром утре</em>
+          </h2>
+
+          <p className="text-[#e8d5b8] text-xl md:text-2xl font-golos mb-4 leading-relaxed">
+            Закажи свежий хлеб к завтраку
+          </p>
+          <p className="text-[#e8d5b8]/70 font-golos text-base mb-12">
+            Принимаем заказы ежедневно до 20:00 — привезём тёплым утром следующего дня
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <a
+              href="tel:+79000000000"
+              className="group flex items-center gap-3 bg-[#f5c87a] text-[#1e1a14] px-10 py-5 rounded-full text-lg font-golos font-semibold hover:bg-[#f0b84a] transition-all duration-300 shadow-2xl hover:shadow-[#f5c87a]/30 hover:scale-105"
+            >
+              <Icon name="Phone" size={22} className="group-hover:animate-bounce" />
+              Позвонить пекарю
+            </a>
+            <div className="flex items-center gap-3 bg-[#1e1a14]/55 backdrop-blur-sm border border-[#d4a96a]/25 px-6 py-5 rounded-full">
+              <Icon name="Clock" size={18} className="text-[#f5c87a] shrink-0" />
+              <span className="text-[#e8d5b8] font-golos text-sm">Ежедневно · до 20:00</span>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-[#e8d5b8]/60 text-sm font-golos">
+            <div className="flex items-center gap-2">
+              <Icon name="Truck" size={16} className="text-[#f5c87a]/70" />
+              <span>Доставка на следующий день</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="Wheat" size={16} className="text-[#f5c87a]/70" />
+              <span>Без дрожжей и улучшителей</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="Heart" size={16} className="text-[#f5c87a]/70" />
+              <span>Сделано с любовью</span>
             </div>
           </div>
         </div>
