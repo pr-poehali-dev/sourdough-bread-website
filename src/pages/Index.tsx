@@ -82,6 +82,11 @@ export default function Index() {
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--cream)]/90 backdrop-blur-sm border-b border-[var(--border-warm)]">
+        <div className="bg-[#1e1a14] text-center py-1.5 px-4">
+          <span className="text-[#f5c87a] font-cormorant font-semibold text-sm md:text-base tracking-wide">
+            Для получения свежего хлеба завтра — сделай заказ сегодня до 16:00
+          </span>
+        </div>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" className="font-cormorant text-2xl font-semibold text-[var(--dark)] tracking-wide">
             Хлеб & Закваска
