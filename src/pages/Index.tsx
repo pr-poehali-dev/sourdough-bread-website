@@ -138,7 +138,7 @@ export default function Index() {
         {/* Full background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/3e666771-14b3-44e3-8ce4-b31873bbe8e4.jpg)` }}
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/e4fea4ab-67be-4a1b-b870-88b8e89b43b0.jpg)` }}
         />
         {/* Warm orange-wheat gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#c8621a]/70 via-[#d4830a]/40 to-[#1e1a14]/80" />
@@ -151,8 +151,8 @@ export default function Index() {
               Живая закваска · Без дрожжей
             </span>
             <h1 className="font-cormorant text-5xl md:text-7xl font-light text-white leading-[1.1] mb-6 drop-shadow-lg">
-              Хлеб, в котором<br />
-              <em className="not-italic font-semibold text-[#f5c87a]">живёт душа</em>
+              Ремесленный хлеб,<br />
+              <em className="not-italic font-semibold text-[#f5c87a]">в котором живёт душа</em>
             </h1>
             <p className="font-cormorant text-3xl md:text-4xl font-light text-[#f5ddb4] leading-snug mb-10 drop-shadow-lg italic">
               Наполни свой день ароматом свежего хлеба
