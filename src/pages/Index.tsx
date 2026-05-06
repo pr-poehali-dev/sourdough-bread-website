@@ -155,8 +155,7 @@ export default function Index() {
               <em className="not-italic font-semibold text-[#f5c87a]">живёт душа</em>
             </h1>
             <p className="text-[#e8d5b8] text-lg leading-relaxed mb-10 font-golos drop-shadow">
-              Каждая буханка выпекается на живой закваске, которой уже несколько лет.
-              Заказывайте сегодня — привезём свежим завтра.
+              Наполни свой день ароматом свежего хлеба
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
