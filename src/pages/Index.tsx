@@ -154,7 +154,7 @@ export default function Index() {
               Хлеб, в котором<br />
               <em className="not-italic font-semibold text-[#f5c87a]">живёт душа</em>
             </h1>
-            <p className="text-[#e8d5b8] text-lg leading-relaxed mb-10 font-golos drop-shadow">
+            <p className="font-cormorant text-3xl md:text-4xl font-light text-[#f5ddb4] leading-snug mb-10 drop-shadow-lg italic">
               Наполни свой день ароматом свежего хлеба
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
