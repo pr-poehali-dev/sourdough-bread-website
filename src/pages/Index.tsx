@@ -36,11 +36,11 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: "Тосты с тыквенными семечками",
-    description: "Хрустящие тосты из хлеба на закваске, посыпанные семечками тыквы.",
+    name: "Пшеничный тартин с тыквенными семечками",
+    description: "Воздушный мякиш с крупными альвеолами и хрустящей корочкой. С щедрой начинкой из тыквенных семечек — полезно и вкусно.",
     weight: "400 г",
     price: "280 ₽",
-    image: "https://cdn.poehali.dev/files/76a76d8a-5eea-4fc4-80a8-a90dda222b6e.jpg",
+    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/e8e7fb0d-0b05-407b-80de-a755dd567f6e.jpg",
     emoji: "🌿",
   },
 ];
