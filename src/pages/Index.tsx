@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const NAV_ITEMS = [
   { label: "О закваске", href: "#about" },
+  { label: "Польза закваски", href: "#sourdough" },
   { label: "Процесс", href: "#process" },
   { label: "Каталог", href: "#catalog" },
   { label: "Контакты", href: "#contacts" },
@@ -197,6 +198,92 @@ export default function Index() {
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
           <span className="text-xs tracking-widest uppercase font-golos">Листайте вниз</span>
           <Icon name="ChevronDown" size={18} className="animate-bounce" />
+        </div>
+      </section>
+
+      {/* SOURDOUGH BENEFITS */}
+      <section id="sourdough" className="min-h-screen flex items-center relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/59996813-3845-4cfa-b7a3-9ab18a9fd946.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1e1a14]/85 via-[#3a1a0a]/70 to-[#1e1a14]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e1a14]/80 via-[#1e1a14]/40 to-transparent" />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
+          <div className="text-center mb-14">
+            <span className="text-xs tracking-[0.2em] uppercase text-[#f5ddb4] font-golos mb-4 inline-block bg-[#8b5e3c]/40 backdrop-blur-sm border border-[#d4a96a]/30 px-4 py-2 rounded-full">
+              Главный ингредиент
+            </span>
+            <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white drop-shadow-lg mt-4">
+              Живая закваска —<br />
+              <em className="not-italic font-semibold text-[#f5c87a]">сердце ремесленного хлеба</em>
+            </h2>
+            <p className="text-[#e8d5b8] mt-5 font-golos max-w-2xl mx-auto text-base leading-relaxed">
+              Наша закваска — это живая культура диких дрожжей и молочнокислых бактерий, которую мы бережно выращиваем каждый день. Именно она превращает простую муку в настоящий хлеб с душой.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            {/* Left column — main benefits */}
+            <div className="space-y-4">
+              {[
+                { icon: "Heart", title: "Лучше усваивается", desc: "Ферментация расщепляет сложные соединения — хлеб легко переваривается и несёт пользу для пищеварения." },
+                { icon: "Leaf", title: "Не даёт чувства тяжести", desc: "Медленные углеводы и низкий гликемический индекс — не набираешь лишний вес и остаёшься сытым надолго." },
+                { icon: "Shield", title: "Глютен не вредит здоровью", desc: "За 12–16 часов ферментации глютен расщепляется настолько, что хлеб переносится значительно легче обычного." },
+                { icon: "Flame", title: "Больше минералов", desc: "Разрушается фитиновая кислота — и все полезные вещества зерна усваиваются в полной мере." },
+              ].map((item, i) => (
+                <div key={i} className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-5 flex gap-4 items-start">
+                  <div className="bg-[#f5c87a]/15 rounded-xl p-2.5 flex-shrink-0">
+                    <Icon name={item.icon as "Heart"} size={20} className="text-[#f5c87a]" />
+                  </div>
+                  <div>
+                    <h3 className="font-cormorant text-xl font-semibold text-white mb-1">{item.title}</h3>
+                    <p className="text-[#c8b49a] text-sm font-golos leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right column — fermentation facts + highlight */}
+            <div className="flex flex-col gap-6">
+              <div className="bg-[#f5c87a]/10 backdrop-blur-sm border border-[#f5c87a]/30 rounded-2xl p-7 flex-1">
+                <h3 className="font-cormorant text-2xl font-semibold text-[#f5c87a] mb-5">Польза ферментации</h3>
+                <div className="space-y-5">
+                  {[
+                    { num: "01", text: "Разрушается фитиновая кислота — минералы из зерна становятся максимально усваиваемыми." },
+                    { num: "02", text: "Кислоты закваски подавляют брожение в кишечнике и снижают вздутие после еды." },
+                    { num: "03", text: "Низкий гликемический индекс — хлеб медленно отдаёт энергию, не вызывая скачков сахара." },
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 items-start">
+                      <span className="font-cormorant text-3xl font-light text-[#f5c87a]/50 leading-none flex-shrink-0">{item.num}</span>
+                      <p className="text-[#e8d5b8] text-sm font-golos leading-relaxed pt-1">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 text-center">
+                <span className="font-cormorant text-6xl font-light text-[#f5c87a]">12–16</span>
+                <p className="text-[#e8d5b8] text-sm font-golos mt-1">часов медленной ферментации<br />каждой буханки</p>
+              </div>
+
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 text-center">
+                <p className="font-cormorant text-xl italic text-[#f5ddb4] leading-snug">
+                  «Невероятная вкусоароматика, которой не бывает у хлеба на промышленных дрожжах. Плюс дольше хранится»
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button
+              onClick={() => scrollTo("#catalog")}
+              className="bg-[#f5c87a] text-[#1e1a14] px-8 py-4 rounded-full text-base hover:bg-[#f0b84a] transition-all duration-300 font-golos tracking-wide font-medium shadow-lg"
+            >
+              Попробовать хлеб на закваске
+            </button>
+          </div>
         </div>
       </section>
 
