@@ -52,6 +52,15 @@ const PRODUCTS = [
     image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/e90b0fb5-d90d-4009-9057-907ab2ab9935.jpg",
     emoji: "🫘",
   },
+  {
+    id: 6,
+    name: "Солодовый тартин с вяленой клюквой",
+    description: "Тёмный ароматный хлеб на солодовой основе с щедрой начинкой из вяленой клюквы. Сочный мякиш с кисло-сладкими ягодными нотками.",
+    weight: "600 г",
+    price: "600 ₽",
+    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/53e126b9-2df9-4a9a-86de-eec4b059b147.jpg",
+    emoji: "🫐",
+  },
 ];
 
 const PROCESS_STEPS = [
