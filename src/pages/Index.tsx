@@ -43,6 +43,15 @@ const PRODUCTS = [
     image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/e8e7fb0d-0b05-407b-80de-a755dd567f6e.jpg",
     emoji: "🌿",
   },
+  {
+    id: 5,
+    name: "Ржано-пшеничный тартин с чёрным кунжутом",
+    description: "Насыщенный хлеб из смеси ржаной и пшеничной муки с хрустящей корочкой, усыпанной чёрным кунжутом. Ароматный и сытный.",
+    weight: "430 г",
+    price: "400 ₽",
+    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/e90b0fb5-d90d-4009-9057-907ab2ab9935.jpg",
+    emoji: "🫘",
+  },
 ];
 
 const PROCESS_STEPS = [
