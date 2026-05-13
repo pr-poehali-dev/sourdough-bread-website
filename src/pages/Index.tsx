@@ -43,8 +43,8 @@ const PRODUCTS = [
   {
     id: 4,
     name: "Пшеничный тартин с тыквенными семечками",
-    weight: "400 г",
-    price: "280 ₽",
+    weight: "400 гр",
+    price: "500 ₽",
     image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/e8e7fb0d-0b05-407b-80de-a755dd567f6e.jpg",
     emoji: "🌿",
     composition: "Пшеничная мука, живая закваска, вода, тыквенные семечки, соль.",
