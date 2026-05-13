@@ -411,18 +411,12 @@ export default function Index() {
                     <span className="text-xs text-[#c8b49a] font-golos bg-[#1e1a14]/50 border border-[#d4a96a]/20 px-3 py-1 rounded-full">{product.weight}</span>
                     <span className="font-cormorant text-2xl text-[#f5c87a] font-semibold ml-auto">{product.price}</span>
                   </div>
-                  <div className="flex gap-2 mt-auto">
+                  <div className="mt-auto">
                     <button
                       onClick={() => setActiveProduct(product)}
-                      className="flex-1 text-sm text-[#f5ddb4] border border-[#d4a96a]/40 px-4 py-2 rounded-full hover:border-[#f5c87a]/70 hover:text-white transition-all duration-200 font-golos"
+                      className="w-full text-sm text-[#f5ddb4] border border-[#d4a96a]/40 px-4 py-2 rounded-full hover:border-[#f5c87a]/70 hover:text-white transition-all duration-200 font-golos"
                     >
                       Подробнее
-                    </button>
-                    <button
-                      onClick={() => document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })}
-                      className="flex-1 text-sm text-[#1e1a14] bg-[#f5c87a] px-4 py-2 rounded-full hover:bg-[#f0b84a] transition-all duration-200 font-golos font-medium"
-                    >
-                      Заказать
                     </button>
                   </div>
                 </div>
@@ -533,12 +527,13 @@ export default function Index() {
                 <p className="text-[#e8d5b8] text-sm font-golos leading-relaxed">{activeProduct.details}</p>
               </div>
 
-              <button
-                onClick={() => { setActiveProduct(null); document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" }); }}
-                className="w-full bg-[#f5c87a] text-[#1e1a14] py-3.5 rounded-full font-golos font-semibold hover:bg-[#f0b84a] transition-all duration-200"
+              <a
+                href="tel:+79025226471"
+                className="w-full flex items-center justify-center gap-2 bg-[#f5c87a] text-[#1e1a14] py-3.5 rounded-full font-golos font-semibold hover:bg-[#f0b84a] transition-all duration-200"
               >
-                Заказать этот хлеб
-              </button>
+                <Icon name="Phone" size={18} />
+                Позвонить пекарю
+              </a>
             </div>
           </div>
         </div>
