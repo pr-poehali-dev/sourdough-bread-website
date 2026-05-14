@@ -65,7 +65,7 @@ const PRODUCTS = [
     name: "Гриссини с семенами льна",
     weight: "300 гр",
     price: "350 ₽",
-    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/b052b79d-38d1-4b4d-a0b6-ed7ecab0919d.jpg",
+    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/files/d97038cc-3d9c-4238-bc24-f975f0fe73b2.jpg",
     emoji: "🥖",
     composition: "Пшеничная мука, живая закваска, вода, семена льна, оливковое масло, соль.",
     details: "Хрустящие итальянские хлебные палочки на живой закваске с семенами льна. Семена льна богаты омега-3 и клетчаткой. Идеальны как снек, к сырной тарелке или вместо хлеба к супу.",
