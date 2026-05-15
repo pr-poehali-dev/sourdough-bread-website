@@ -174,7 +174,7 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="pt-24 md:pt-0 min-h-screen flex items-center relative overflow-hidden">
+      <section className="pt-24 md:pt-0 min-h-screen flex items-end md:items-center relative overflow-hidden">
         {/* Full background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
