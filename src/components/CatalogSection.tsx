@@ -23,7 +23,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
-    name: "Ржано-пшеничный с чёрным кунжутом",
+    name: "Ржаной классический",
     weight: "430 г",
     price: "400 ₽",
     image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/2e5c3087-9969-4a61-b40a-79d32375726c.jpg",
