@@ -120,7 +120,7 @@ export default function CatalogSection({ activeProduct, setActiveProduct }: Cata
             <h2 className="font-cormorant text-4xl md:text-6xl font-light text-white drop-shadow-lg">
               Сейчас в меню
             </h2>
-            <p className="text-[#e8d5b8] mt-4 font-golos">Заказывайте до 20:00 — доставим завтра утром</p>
+            <p className="text-[#e8d5b8] mt-4 font-golos">Заказывайте до 16:00 — доставим завтра утром</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {PRODUCTS.map((product) => (
