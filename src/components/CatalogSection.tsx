@@ -13,6 +13,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
+    isNew: true,
     name: "Десертный хлеб с фруктами и орехами",
     weight: "600 гр",
     price: "700 ₽",
@@ -73,6 +74,7 @@ export const PRODUCTS = [
   },
   {
     id: 9,
+    isNew: true,
     name: "Чёрный хомяк",
     subtitle: "Ржаной хлеб с 5 видами семян и черносливом",
     weight: "430 гр",
@@ -132,6 +134,13 @@ export default function CatalogSection({ activeProduct, setActiveProduct }: Cata
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  {"isNew" in product && product.isNew && (
+                    <div className="absolute top-3 left-3">
+                      <span className="font-cormorant text-sm font-bold tracking-widest uppercase text-[#1e1a14] bg-[#f5c87a] px-3 py-1.5 rounded-sm shadow-md border-b-2 border-[#c8920a] rotate-[-2deg] inline-block" style={{letterSpacing: "0.15em"}}>
+                        ✦ Новинка ✦
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-cormorant text-xl font-semibold text-white leading-snug mb-1">{product.name}</h3>
