@@ -45,17 +45,17 @@ export default function ContactsSection() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-[#e8d5b8]/60 text-sm font-golos">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-[#f5ddb4] text-sm font-golos font-semibold tracking-wide">
             <div className="flex items-center gap-2">
-              <Icon name="Truck" size={16} className="text-[#f5c87a]/70" />
+              <Icon name="Truck" size={16} className="text-[#f5c87a]" />
               <span>Доставка на следующий день</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="Wheat" size={16} className="text-[#f5c87a]/70" />
-              <span>Без дрожжей и улучшителей</span>
+              <Icon name="Wheat" size={16} className="text-[#f5c87a]" />
+              <span>Без дрожжей и химии</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="Heart" size={16} className="text-[#f5c87a]/70" />
+              <Icon name="Heart" size={16} className="text-[#f5c87a]" />
               <span>Сделано с любовью</span>
             </div>
           </div>

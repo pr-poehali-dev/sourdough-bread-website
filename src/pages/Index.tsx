@@ -157,7 +157,7 @@ export default function Index() {
                 <p>
                   Благодаря молочнокислым бактериям наш хлеб хранится в холодильнике более недели,
                   не плесневея и не черствея. Естественные кислоты закваски работают как натуральный
-                  консервант — без химии и улучшителей.
+                  консервант — без химии и добавок.
                 </p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function Index() {
               </div>
               <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2">
                 <span className="font-cormorant text-5xl font-light text-[#f5c87a]">0</span>
-                <span className="text-[#e8d5b8] text-sm font-golos">дрожжей и улучшителей</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">дрожжей и добавок</span>
               </div>
               <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2">
                 <span className="font-cormorant text-5xl font-light text-[#f5c87a]">12–16 ч</span>
