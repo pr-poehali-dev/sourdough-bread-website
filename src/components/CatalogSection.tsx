@@ -75,7 +75,7 @@ export const PRODUCTS = [
     id: 6,
     name: "Солодовый тартин с вяленой клюквой",
     weight: "600 г",
-    price: "600 ₽",
+    price: "670 ₽",
     image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/3cece9fb-b099-4128-b7df-de38b16fbc2c.jpg",
     emoji: "🫐",
     composition: "Живая пшеничная закваска, пшеничная мука, ржаной солод, вода, вяленая клюква, соль морская.",
