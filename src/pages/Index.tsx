@@ -172,9 +172,13 @@ export default function Index() {
                 <span className="font-cormorant text-5xl font-light text-[#f5c87a]">0</span>
                 <span className="text-[#e8d5b8] text-sm font-golos">дрожжей и улучшителей</span>
               </div>
-              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2 col-span-2">
+              <div className="bg-[#1e1a14]/60 backdrop-blur-sm border border-[#d4a96a]/20 rounded-2xl p-6 flex flex-col gap-2">
                 <span className="font-cormorant text-5xl font-light text-[#f5c87a]">12–16 ч</span>
                 <span className="text-[#e8d5b8] text-sm font-golos">медленная ферментация каждой буханки</span>
+              </div>
+              <div className="bg-[#f5c87a]/10 backdrop-blur-sm border border-[#f5c87a]/30 rounded-2xl p-6 flex flex-col gap-2">
+                <span className="font-cormorant text-5xl font-light text-[#f5c87a]">7+ дней</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">хранится в холодильнике без потери вкуса</span>
               </div>
             </div>
           </div>
