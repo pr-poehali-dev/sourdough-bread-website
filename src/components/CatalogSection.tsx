@@ -72,6 +72,17 @@ export const PRODUCTS = [
     details: "Этот хлеб — чистый, без лишнего. Только живая закваска, ржаная мука, вода и соль — и то, что рождается на их пересечении за долгие 16 часов ферментации. Закваска работает медленно: размягчает крахмал, расщепляет фитиновую кислоту, раскрывает аромат ржи до самой её глубины. Тесто густое, тяжёлое — его нельзя вымесить как пшеничное, его бережно перекладывают в форму, разравнивают влажными руками. Чёрный кунжут щедро рассыпается поверх и слегка вдавливается в поверхность. Форма ставится на раскалённый камень — и начинается главное таинство выпечки. Через час духовку открываешь осторожно: оттуда выплёскивается волна тёмного ржаного аромата. Хлеб, который становится только лучше на второй и третий день.",
   },
   {
+    id: 9,
+    name: "Чёрный хомяк",
+    subtitle: "Ржаной хлеб с 5 видами семян и черносливом",
+    weight: "430 гр",
+    price: "700 ₽",
+    image: "https://cdn.poehali.dev/projects/552ff5ae-1510-4e54-8df4-2f4097d4cd94/bucket/763d3873-0042-4545-9802-c6a0ebc5104d.jpg",
+    emoji: "🐹",
+    composition: "Живая ржаная закваска, ржаная мука обдирная, пшеничная мука, вода, чернослив без косточки, семена льна, семена подсолнечника, семена кунжута, тыквенные семечки, семена чиа, соль морская.",
+    details: "«Чёрный хомяк» — это тёмный, плотный и невероятно сытный хлеб для тех, кто ценит глубину вкуса и настоящую пользу. Живая ржаная закваска ферментирует тесто 16 часов: за это время ржаная мука раскрывается полностью, отдавая весь свой аромат — густой, земляной, чуть хмельной. Пять видов семян — лён, подсолнечник, кунжут, тыква и чиа — предварительно замачиваются, чтобы в выпеченном хлебе они были мягкими, маслянистыми и не перебивали, а обогащали вкус. Чернослив нарезается крупными кусочками и вмешивается в тесто руками — он тает внутри мякиша и даёт едва уловимую сладость, которая идеально контрастирует с кислинкой закваски. Тесто укладывается в форму и уходит на ночной расстой в холодильник. Утром форма ставится на раскалённый камень и отправляется в печь, разогретую до 240 °C. В первые минуты подаётся пар — корочка успевает схватиться и стать хрустящей, а мякиш остаётся влажным и плотным. Хлеб, который хранится в холодильнике больше недели и становится только богаче на вкус.",
+  },
+  {
     id: 6,
     name: "Солодовый тартин с вяленой клюквой",
     weight: "600 г",
@@ -123,7 +134,10 @@ export default function CatalogSection({ activeProduct, setActiveProduct }: Cata
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-cormorant text-xl font-semibold text-white leading-snug mb-2">{product.name}</h3>
+                  <h3 className="font-cormorant text-xl font-semibold text-white leading-snug mb-1">{product.name}</h3>
+                  {"subtitle" in product && product.subtitle && (
+                    <p className="text-[#c8b49a] text-xs font-golos mb-2 leading-snug">{product.subtitle}</p>
+                  )}
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-xs text-[#c8b49a] font-golos bg-[#1e1a14]/50 border border-[#d4a96a]/20 px-3 py-1 rounded-full">{product.weight}</span>
                     <span className="font-cormorant text-2xl text-[#f5c87a] font-semibold ml-auto">{product.price}</span>
@@ -172,6 +186,9 @@ export default function CatalogSection({ activeProduct, setActiveProduct }: Cata
                 <h3 className="font-cormorant text-2xl font-semibold text-white leading-snug">{activeProduct.name}</h3>
                 <span className="font-cormorant text-2xl text-[#f5c87a] font-semibold whitespace-nowrap">{activeProduct.price}</span>
               </div>
+              {"subtitle" in activeProduct && activeProduct.subtitle && (
+                <p className="text-[#c8b49a] text-xs font-golos mb-2 leading-snug">{activeProduct.subtitle}</p>
+              )}
               <span className="inline-block text-xs text-[#c8b49a] font-golos bg-[#1e1a14]/50 border border-[#d4a96a]/20 px-3 py-1 rounded-full mb-5">{activeProduct.weight}</span>
 
               <div className="mb-4">
