@@ -178,7 +178,7 @@ export default function Index() {
               </div>
               <div className="bg-[#f5c87a]/10 backdrop-blur-sm border border-[#f5c87a]/30 rounded-2xl p-6 flex flex-col gap-2">
                 <span className="font-cormorant text-5xl font-light text-[#f5c87a]">7+ дней</span>
-                <span className="text-[#e8d5b8] text-sm font-golos">хранится в холодильнике без потери вкуса</span>
+                <span className="text-[#e8d5b8] text-sm font-golos">хранится более 7 дней</span>
               </div>
             </div>
           </div>
